@@ -37,9 +37,9 @@ namespace EjemploAbmDialogo2
         /** ventana de alta/edición/modificar filtrar */
 
         FABMPropietario Fed;
-        private void button5_Click(object sender, EventArgs e)
+        private void btnEditarPropietarios_Click(object sender, EventArgs e)
         {
-            //creaco+pm del formulario.
+            //creación del formulario.
             Fed = new FABMPropietario();
             
             Fed.btnEdNuevoAgregar.Click += new System.EventHandler(this.FABMPropietario_button1_Click);
@@ -150,7 +150,6 @@ namespace EjemploAbmDialogo2
                     Fed.tbEdDNI.Text = usr.DNI.ToString();
                     Fed.tbEdEdad.Text = usr.Edad.ToString();
                 }
-
             }
         }
 
@@ -180,9 +179,6 @@ namespace EjemploAbmDialogo2
 
         /*fin de ventana de edición de propietarios*/
 
-
         /*otra ventana*/
-
-
     }
 }

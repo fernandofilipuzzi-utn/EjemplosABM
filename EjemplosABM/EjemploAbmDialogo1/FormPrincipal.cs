@@ -32,9 +32,9 @@ namespace EjemploAbmDialogo1
             agencia.AgregarUsuario(10, "TATO", 11);
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void btnEditarPropietarios_Click(object sender, EventArgs e)
         {
-            //creaco+pm del formulario.
+            //creación del formulario.
             FABMPropietario Fed = new FABMPropietario();
 
             bool ok=true;
@@ -46,9 +46,9 @@ namespace EjemploAbmDialogo1
                 //inicializar el area de edición
                 if (error == false && Fed.SelectedDNI==-1)
                 {
-                    Fed.tbEdNombre.Text = "";
-                    Fed.tbEdDNI.Text = "";
-                    Fed.tbEdEdad.Text = "";
+                    Fed.tbEdNombre.Clear();
+                    Fed.tbEdDNI.Clear();
+                    Fed.tbEdEdad.Clear();
                 }
                 //inicializar la grilla
                 actualizar(Fed);  
@@ -81,9 +81,7 @@ namespace EjemploAbmDialogo1
                     }
                     catch (Exception err)
                     {
-                        MessageBox.Show(err.Message, "Error",
-                                           MessageBoxButtons.OK,
-                                           MessageBoxIcon.Error);
+                        MessageBox.Show(err.Message, "Error", MessageBoxButtons.OK,MessageBoxIcon.Error);
                         error = true;
                     }
                 }
@@ -99,17 +97,17 @@ namespace EjemploAbmDialogo1
                     }
                 }
 
-                ok = (dr == DialogResult.OK || dr == DialogResult.Retry || dr == DialogResult.Yes);
+                ok = (dr == DialogResult.OK || dr == DialogResult.Retry || dr == DialogResult.Ignore  || dr == DialogResult.Yes);
             }
         }
-
 
         private void actualizar(FABMPropietario fed)
         {
             //sección del filtro
+            if (fed.DialogResult == DialogResult.Ignore)
+                fed.tbFiltroNombre.Clear();
 
-
-            //datps deñ foñtrp
+            //datos del form
             Int32 dni;
             Int32.TryParse(fed.tbFiltroDNI.Text, out dni);
             string nombre = fed.tbFiltroNombre.Text;
@@ -120,18 +118,15 @@ namespace EjemploAbmDialogo1
             fed.dgvPropietarios.Rows.Clear();
             foreach (Propietario usr in lista)
             {
-                fed.dgvPropietarios.Rows.Add(
-                         new string[]{ 
+                fed.dgvPropietarios.Rows.Add( 
+                             new string[]{ 
                                         usr.DNI.ToString(),
                                         usr.Nombre,
                                         usr.Edad.ToString(),
-                                    });
+                             });
             }
 
-
-
             /*
-
             //List<Usuario> lista = agencia.BuscarTodosAlternativa(dni, nombre);
             List<Usuario> lista = agencia.BuscarTodos(dni, nombre);
             lista.Sort(comparer);

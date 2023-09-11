@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.tbFiltroDNI = new System.Windows.Forms.TextBox();
             this.tbFiltroNombre = new System.Windows.Forms.TextBox();
             this.btnFilterActualizar = new System.Windows.Forms.Button();
@@ -53,6 +54,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.tbFiltroDNI);
             this.groupBox2.Controls.Add(this.tbFiltroNombre);
             this.groupBox2.Controls.Add(this.btnFilterActualizar);
@@ -63,6 +65,16 @@
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Búsqueda/Selección";
+            // 
+            // button1
+            // 
+            this.button1.DialogResult = System.Windows.Forms.DialogResult.Ignore;
+            this.button1.Location = new System.Drawing.Point(236, 17);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(67, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Limpiar";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // tbFiltroDNI
             // 
@@ -82,9 +94,9 @@
             // btnFilterActualizar
             // 
             this.btnFilterActualizar.DialogResult = System.Windows.Forms.DialogResult.Retry;
-            this.btnFilterActualizar.Location = new System.Drawing.Point(278, 19);
+            this.btnFilterActualizar.Location = new System.Drawing.Point(309, 17);
             this.btnFilterActualizar.Name = "btnFilterActualizar";
-            this.btnFilterActualizar.Size = new System.Drawing.Size(98, 23);
+            this.btnFilterActualizar.Size = new System.Drawing.Size(68, 23);
             this.btnFilterActualizar.TabIndex = 5;
             this.btnFilterActualizar.Text = "Filtrar";
             this.btnFilterActualizar.UseVisualStyleBackColor = true;
@@ -103,8 +115,6 @@
             this.dgvPropietarios.Size = new System.Drawing.Size(376, 135);
             this.dgvPropietarios.TabIndex = 0;
             this.dgvPropietarios.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvPropietarios_CellMouseClick);
-            this.dgvPropietarios.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvPropietarios_MouseClick);
-            this.dgvPropietarios.SelectionChanged += new System.EventHandler(this.dgvPropietarios_SelectionChanged);
             // 
             // DNI
             // 
@@ -178,7 +188,6 @@
             this.btnEdNuevoAgregar.TabIndex = 9;
             this.btnEdNuevoAgregar.Text = "Aceptar";
             this.btnEdNuevoAgregar.UseVisualStyleBackColor = true;
-            this.btnEdNuevoAgregar.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox1
             // 
@@ -205,7 +214,7 @@
             this.btnEdLimpiar.TabIndex = 16;
             this.btnEdLimpiar.Text = "Limpiar";
             this.btnEdLimpiar.UseVisualStyleBackColor = true;
-            this.btnEdLimpiar.Click += new System.EventHandler(this.button4_Click);
+            this.btnEdLimpiar.Click += new System.EventHandler(this.btnEdLimpiar_Click);
             // 
             // btnCerrar
             // 
@@ -225,7 +234,9 @@
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FABMPropietario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Altar/Modificación/ Listar Propietario";
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -256,5 +267,6 @@
         public System.Windows.Forms.TextBox tbFiltroDNI;
         public System.Windows.Forms.TextBox tbFiltroNombre;
         private System.Windows.Forms.Button btnEdLimpiar;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -13,33 +13,17 @@ namespace EjemploAbmDialogo1
     {
         public int SelectedDNI=-1;
 
-
         public FABMPropietario()
         {
             InitializeComponent();
         }
 
-        private void dgvPropietarios_SelectionChanged(object sender, EventArgs e)
+        private void btnEdLimpiar_Click(object sender, EventArgs e)
         {
-           
-        }
-
-        private void dgvPropietarios_MouseClick(object sender, MouseEventArgs e)
-        {
-            
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            tbEdDNI.Text = "";
-            tbEdNombre.Text = "";
-            tbEdEdad.Text = "";
+            tbEdDNI.Clear();
+            tbEdNombre.Clear();
+            tbEdEdad.Clear();
             SelectedDNI = -1;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void dgvPropietarios_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)

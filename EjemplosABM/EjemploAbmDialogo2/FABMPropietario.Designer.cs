@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnFiltroLimpiar = new System.Windows.Forms.Button();
             this.tbFiltroDNI = new System.Windows.Forms.TextBox();
             this.tbFiltroNombre = new System.Windows.Forms.TextBox();
             this.btnFiltroActualizar = new System.Windows.Forms.Button();
@@ -47,7 +48,6 @@
             this.btnEdEliminar = new System.Windows.Forms.Button();
             this.btnEdLimpiar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.btnFiltroLimpiar = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPropietarios)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -66,6 +66,16 @@
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Búsqueda/Selección";
+            // 
+            // btnFiltroLimpiar
+            // 
+            this.btnFiltroLimpiar.Location = new System.Drawing.Point(250, 16);
+            this.btnFiltroLimpiar.Name = "btnFiltroLimpiar";
+            this.btnFiltroLimpiar.Size = new System.Drawing.Size(57, 23);
+            this.btnFiltroLimpiar.TabIndex = 18;
+            this.btnFiltroLimpiar.Text = "Limpiar";
+            this.btnFiltroLimpiar.UseVisualStyleBackColor = true;
+            this.btnFiltroLimpiar.Click += new System.EventHandler(this.btnFiltroLimpiar_Click);
             // 
             // tbFiltroDNI
             // 
@@ -223,16 +233,6 @@
             this.button2.Text = "Cerrar";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // btnFiltroLimpiar
-            // 
-            this.btnFiltroLimpiar.Location = new System.Drawing.Point(250, 16);
-            this.btnFiltroLimpiar.Name = "btnFiltroLimpiar";
-            this.btnFiltroLimpiar.Size = new System.Drawing.Size(57, 23);
-            this.btnFiltroLimpiar.TabIndex = 18;
-            this.btnFiltroLimpiar.Text = "Limpiar";
-            this.btnFiltroLimpiar.UseVisualStyleBackColor = true;
-            this.btnFiltroLimpiar.Click += new System.EventHandler(this.btnFiltroLimpiar_Click);
-            // 
             // FABMPropietario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -241,7 +241,9 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FABMPropietario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Alta/Modificar/Eliminar seleccion Propietario";
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

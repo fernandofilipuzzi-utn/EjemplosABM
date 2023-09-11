@@ -36,7 +36,7 @@ namespace EjemploAbmDialogo3
 
         /** ventana de alta/edición/modificar filtrar */
                 
-        private void button5_Click(object sender, EventArgs e)
+        private void btnEditarPropietarios_Click(object sender, EventArgs e)
         {
             FABMPropietario Fed;
 

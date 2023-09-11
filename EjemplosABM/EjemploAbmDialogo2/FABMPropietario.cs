@@ -13,7 +13,6 @@ namespace EjemploAbmDialogo2
     {
         public int SelectedDNI=-1;
 
-
         public FABMPropietario()
         {
             InitializeComponent();
@@ -32,6 +31,5 @@ namespace EjemploAbmDialogo2
             tbFiltroDNI.Text = "";
             tbFiltroNombre.Text = "";
         }
-        
     }
 }

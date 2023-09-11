@@ -116,8 +116,6 @@
             this.dgvPropietarios.Size = new System.Drawing.Size(376, 135);
             this.dgvPropietarios.TabIndex = 0;
             this.dgvPropietarios.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvPropietarios_CellMouseClick);
-            this.dgvPropietarios.SelectionChanged += new System.EventHandler(this.dgvPropietarios_SelectionChanged);
-            this.dgvPropietarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPropietarios_CellContentClick);
             // 
             // DNI
             // 
@@ -239,7 +237,6 @@
             this.btnCerrar.TabIndex = 17;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = true;
-            this.btnCerrar.Click += new System.EventHandler(this.button2_Click);
             // 
             // FABMPropietario
             // 
@@ -249,7 +246,9 @@
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FABMPropietario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Alta/Modificación/Eliminar de Propietarios";
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

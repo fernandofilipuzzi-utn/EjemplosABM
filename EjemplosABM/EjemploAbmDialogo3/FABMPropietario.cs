@@ -21,11 +21,6 @@ namespace EjemploAbmDialogo3
             InitializeComponent();
         }
 
-        private void dgvPropietarios_SelectionChanged(object sender, EventArgs e)
-        {
-           
-        }
-
         public void Init()
         {
             actualizar();
@@ -37,11 +32,6 @@ namespace EjemploAbmDialogo3
             tbEdNombre.Text = "";
             tbEdEdad.Text = "";
             SelectedDNI = -1;
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnEdNuevoEditar_Click(object sender, EventArgs e)
@@ -99,8 +89,6 @@ namespace EjemploAbmDialogo3
             }
         }
 
-       
-
         private void btnFilterActualizar_Click(object sender, EventArgs e)
         {
             actualizar(); 
@@ -133,11 +121,6 @@ namespace EjemploAbmDialogo3
         private void btnEdClear_Click(object sender, EventArgs e)
         {
             ClearRegistro();
-        }
-
-        private void dgvPropietarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         private void dgvPropietarios_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
